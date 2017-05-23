@@ -39,6 +39,12 @@
     <h2 i18n:translate="heading_file_contents">File contents</h2>
     <pre tal:content="context/file/data|nothing" />
   </div>
+    
+      <div tal:condition="context/transcript">
+      <hr />
+    <h2>Transcript</h2>
+    <div tal:replace="structure context/transcript/output" />
+  </div>
 
 </metal:block>
 </metal:content-core>
